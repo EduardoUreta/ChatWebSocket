@@ -6,7 +6,8 @@ import { viewsRouter } from './routes/views.routes.js';
 import {Server} from "socket.io";
 
 // Crear puerto
-const port = 8080;
+    // Para Deployar
+const port = process.env.PORT || 8080;
 
 // Crear APP
 const app= express();
@@ -53,7 +54,7 @@ io.on("connection", (socket) => {
         // Enviar el chat completo a todos los conectados
         io.emit("chatHistory", chat)
     });
-    
+
     // Recibirmos mensaje de conexión de nuevo cliente
     socket.on("authenticated", (data) => {
         // El SV le mandará el mensaje a todos menos al nuevo
