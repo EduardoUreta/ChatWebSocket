@@ -1,0 +1,19 @@
+<h1>Página del Chat</h1>
+
+<p>Bienvenido <span id="userName"></span></p>
+
+<input type="text" placeholder="Ingresa el mensaje" id="inputMsg"/>
+<button id="sendMsg">Enviar</button>
+
+<div id="chatPanel"></div>
+
+
+{{!-- Configurar WebSocket desde la vista --}}
+<script src="/socket.io/socket.io.js"></script>
+
+{{!-- Sweet Alert --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{{!-- La carpeta Public es de acceso, por ende asi es  --}}
+<script src="/js/home.js"></script>
+
